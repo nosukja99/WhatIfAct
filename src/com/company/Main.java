@@ -29,12 +29,12 @@ public class Main {
        
 	System.out.println("What is your Tax code?");
 	taxCode = scanner.next();	
-	
-	if(taxCode.equals("NRM"))
+	String convertTaxCode=taxCode.toUpperCase();
+	if(convertTaxCode.equals("NRM"))
 	    taxRate=0.06;
-	else if(taxCode.equals("NPF"))
+	else if(convertTaxCode.equals("NPF"))
 	    taxRate=0;
-	else if(taxCode.equals("BIZ"))
+	else if(convertTaxCode.equals("BIZ"))
 	    taxRate=0.045;
 	else
 	    System.out.println("This Tax code is error.");
@@ -44,7 +44,7 @@ public class Main {
 	System.out.println("Customer Id: "+custID);
 	System.out.println("Customer Name: "+custFName+" "+custLName);
 	System.out.println("Sales Amount: $"+df.format(salesAmount));
-	System.out.println("Tax Code: "+taxCode);
+	System.out.println("Tax Code: "+convertTaxCode);
 	System.out.printf("Total Amount Due: $"+"%.2f",totalAmount);
 	    
 	
